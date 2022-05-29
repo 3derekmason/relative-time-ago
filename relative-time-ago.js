@@ -1,4 +1,4 @@
-const relativeTime = (date, str) => {
+export default relativeTimeAgo = (date, str) => {
   const lessThanMessage = `less than a ${str} ago`;
   const currentTimestamp = Date.parse(new Date());
   if (typeof date !== "number") {
@@ -37,4 +37,3 @@ const relativeTime = (date, str) => {
       )} minutes, and ${Math.floor(difference * 0.001)} seconds ago...`;
 };
 
-module.exports = relativeTime;
