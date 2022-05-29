@@ -1,5 +1,7 @@
+const { NO_DATE } = require("./Errors");
+
 const relativeTime = (date, string) => {
-  return date;
+  return date ? date : NO_DATE;
 };
 
 module.exports = relativeTime;
