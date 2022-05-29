@@ -1,0 +1,11 @@
+{
+  "name": "relativetime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "relativeTime.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Derek Mason",
+  "license": "ISC"
+}
