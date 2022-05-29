@@ -3,6 +3,7 @@ const { NO_DATE } = require("./Errors");
 // Input
 // Some date string or number(timestamp),
 // (optional) years, months, days, hours, minutes, seconds
+// (optional) locale region key
 
 // Output
 // A string of the desired interval of time since given date.
@@ -14,6 +15,9 @@ const { NO_DATE } = require("./Errors");
 // Constraints
 
 const relativeTime = (date, string) => {
+  if (typeof date === "number") {
+    date = new Date(date);
+  }
   return date ? date : NO_DATE;
 };
 
