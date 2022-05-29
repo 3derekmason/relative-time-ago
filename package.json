@@ -1,14 +1,11 @@
 {
   "name": "relativetime",
   "version": "1.0.0",
-  "description": "",
+  "description": "Return a specified unit of time since a given date.",
   "main": "relativeTime.js",
   "scripts": {
-    "test": "cd test && jest "
+    "test": "test "
   },
   "author": "Derek Mason",
-  "license": "ISC",
-  "dependencies": {
-    "jest": "^28.1.0"
-  }
+  "license": "ISC"
 }
