@@ -15,3 +15,11 @@ test("Returns a string", () => {
   expect(typeof relativeTime(input)).toBe("string");
   expect(typeof relativeTime(parsed)).toBe("string");
 });
+
+test("Correct time returned", () => {
+  const date1 = new Date();
+  const date2 = Date.parse(date1) + 12345678;
+  expect(relativeTime(new Date(date2))).toBe(
+    "0 years, 0 months, 0 days, 3 hours, 26 minutes, and 15 seconds"
+  );
+});
