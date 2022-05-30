@@ -1,3 +1,5 @@
+// convert milliseconds to desired time intervals
+
 const milliYears = (n) => {
   return Math.floor(n * 0.000000000031689);
 };
@@ -22,12 +24,18 @@ const relativeTimeAgo = (date, key) => {
     return new Error("Doesnt work without a date to reference!");
   }
   const currentTimestamp = Date.parse(new Date());
+  
+  // convert date to unix epoch
   if (typeof date !== "number") {
     date = Date.parse(date);
   }
+  // grab total milliseconds between dates
   const difference = currentTimestamp - date;
+  
+  // display something different if the difference is less than 0
   const lessThanMessage = `Less than one ${key} ago`;
 
+  // return message depening on provided key
   if (key === "year") {
     return milliYears(difference) < 1
       ? lessThanMessage
@@ -58,6 +66,7 @@ const relativeTimeAgo = (date, key) => {
       ? lessThanMessage
       : `${milliSecs(difference)} seconds ago`;
   }
+  // if no key is provided as an argument, return difference in milliseconds
   return `${difference} milliseconds ago`;
 };
 
