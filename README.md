@@ -1,8 +1,14 @@
 # relative-time-ago
 
-## relativeTimeAgo( date, key );
+```sh
+relativeTimeAgo( date, key );
+```
 
 Returns a specified amount of time since a specified date.
+
+[Npm package](https://www.npmjs.com/package/relative-time-ago)
+
+[Github repo](https://github.com/3derekmason/relative-time-ago)
 
 ## Installation
 
@@ -16,7 +22,7 @@ npm install relative-time-ago
 import relativeTimeAgo from "relative-time-ago";
 ```
 
-#### Inputs
+#### - Inputs -
 
 `date` - Either a date string **or** UNIX number.
 
@@ -29,7 +35,7 @@ import relativeTimeAgo from "relative-time-ago";
 - `minute` - returns number of minutes ago
 - `second` - returns number of seconds ago
 
-#### Outputs
+#### - Outputs -
 
 By default will return the number of milliseconds between the given date and whenever `relativeTimeAgo` is called.
 
@@ -56,3 +62,9 @@ console.log(relativeTimeAgo(date);
 
   ---> // XXXXX milliseconds ago
 ```
+
+If **relativeTimeAgo** is called without a date argument, check your console to see error.
+
+---
+
+Thanks for reading! Check out my portfolio at [derekmason.dev](https://www.derekmason.dev/)
