@@ -1,6 +1,6 @@
 {
   "name": "relative-time-ago",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Return a specified unit of time since a given date.",
   "main": "relative-time-ago.js",
   "scripts": {
