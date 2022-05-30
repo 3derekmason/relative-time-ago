@@ -7,5 +7,6 @@
     "test": "test "
   },
   "author": "Derek Mason",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
 }
