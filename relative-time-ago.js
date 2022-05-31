@@ -1,21 +1,21 @@
 // convert milliseconds to desired time intervals
 
-const milliYears = (n) => {
+const millisecondsInAYear = (n) => {
   return Math.floor(n * 0.000000000031689);
 };
-const milliMonths = (n) => {
+const millisecondsInAMonth = (n) => {
   return Math.floor(n * 0.00000000038026);
 };
-const milliDays = (n) => {
+const millisecondsInADay = (n) => {
   return Math.floor(n * 0.000000011574);
 };
-const milliHours = (n) => {
+const millisecondsInAnHour = (n) => {
   return Math.floor(n * 0.00000027778);
 };
-const milliMinutes = (n) => {
+const millisecondsInAMinute = (n) => {
   return Math.floor(n * 0.0000166667);
 };
-const milliSecs = (n) => {
+const millisecondsInASecond = (n) => {
   return Math.floor(n * 0.001);
 };
 
@@ -37,34 +37,34 @@ const relativeTimeAgo = (date, key) => {
 
   // return message depening on provided key
   if (key === "year") {
-    return milliYears(difference) < 1
+    return millisecondsInAYear(difference) < 1
       ? lessThanMessage
-      : `${milliYears(difference)} years ago`;
+      : `${millisecondsInAYear(difference)} years ago`;
   }
   if (key === "month") {
-    return milliMonths(difference) < 1
+    return millisecondsInAMonth(difference) < 1
       ? lessThanMessage
-      : `${milliMonths(difference)} months ago`;
+      : `${millisecondsInAMonth(difference)} months ago`;
   }
   if (key === "day") {
-    return milliDays(difference) < 1
+    return millisecondsInADay(difference) < 1
       ? lessThanMessage
-      : `${milliDays(difference)} days ago`;
+      : `${millisecondsInADay(difference)} days ago`;
   }
   if (key === "hour") {
-    return milliHours(difference) < 1
+    return millisecondsInAnHour(difference) < 1
       ? lessThanMessage
-      : `${milliHours(difference)} hours ago`;
+      : `${millisecondsInAnHour(difference)} hours ago`;
   }
   if (key === "minute") {
-    return milliMinutes(difference) < 1
+    return millisecondsInAMinute(difference) < 1
       ? lessThanMessage
-      : `${milliMinutes(difference)} minutes ago`;
+      : `${millisecondsInAMinute(difference)} minutes ago`;
   }
   if (key === "second") {
-    return milliSecs(difference) < 1
+    return millisecondsInASecond(difference) < 1
       ? lessThanMessage
-      : `${milliSecs(difference)} seconds ago`;
+      : `${millisecondsInASecond(difference)} seconds ago`;
   }
   // if no key is provided as an argument, return difference in milliseconds
   return `${difference} milliseconds ago`;
