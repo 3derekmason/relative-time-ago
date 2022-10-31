@@ -1,21 +1,21 @@
 // convert milliseconds to desired time intervals
 
-const millisecondsInAYear = (n) => {
+const millisecondsForYear = (n) => {
   return Math.floor(n * 0.000000000031689);
 };
-const millisecondsInAMonth = (n) => {
+const millisecondsForMonth = (n) => {
   return Math.floor(n * 0.00000000038026);
 };
-const millisecondsInADay = (n) => {
+const millisecondsForDay = (n) => {
   return Math.floor(n * 0.000000011574);
 };
-const millisecondsInAnHour = (n) => {
+const millisecondsForHour = (n) => {
   return Math.floor(n * 0.00000027778);
 };
-const millisecondsInAMinute = (n) => {
+const millisecondsForMinute = (n) => {
   return Math.floor(n * 0.0000166667);
 };
-const millisecondsInASecond = (n) => {
+const millisecondsForSecond = (n) => {
   return Math.floor(n * 0.001);
 };
 
@@ -24,14 +24,14 @@ const relativeTimeAgo = (date, key) => {
     return new Error("Doesnt work without a date to reference!");
   }
   const currentTimestamp = Date.parse(new Date());
-  
+
   // convert date to unix epoch
   if (typeof date !== "number") {
     date = Date.parse(date);
   }
   // grab total milliseconds between dates
   const difference = currentTimestamp - date;
-  
+
   // display something different if the difference is less than 0
   const lessThanMessage = `Less than one ${key} ago`;
 
