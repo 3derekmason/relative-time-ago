@@ -21,7 +21,7 @@ const millisecondsForSecond = (n) => {
 
 const relativeTimeAgo = (date, key) => {
   if (!date) {
-    return new Error("Doesnt work without a date to reference!");
+    return new Error("Invalid date! Must be a date object or unix timestamp.");
   }
   const currentTimestamp = Date.parse(new Date());
 
