@@ -39,35 +39,47 @@ const relativeTimeAgo = (date, key) => {
   if (key === "year") {
     return millisecondsInAYear(difference) < 1
       ? lessThanMessage
+      : millisecondsInAYear(difference) === 1
+      ? `${millisecondsInAYear(difference)} year ago`
       : `${millisecondsInAYear(difference)} years ago`;
   }
   if (key === "month") {
     return millisecondsInAMonth(difference) < 1
       ? lessThanMessage
+      : millisecondsInAMonth(difference) === 1
+      ? `${millisecondsInAMonth(difference)} month ago`
       : `${millisecondsInAMonth(difference)} months ago`;
   }
   if (key === "day") {
     return millisecondsInADay(difference) < 1
       ? lessThanMessage
+      : millisecondsInADay(difference) === 1
+      ? `${millisecondsInADay(difference)} day ago`
       : `${millisecondsInADay(difference)} days ago`;
   }
   if (key === "hour") {
     return millisecondsInAnHour(difference) < 1
       ? lessThanMessage
+      : millisecondsInAnHour(difference) === 1
+      ? `${millisecondsInAnHour(difference)} hour ago`
       : `${millisecondsInAnHour(difference)} hours ago`;
   }
   if (key === "minute") {
     return millisecondsInAMinute(difference) < 1
       ? lessThanMessage
+      : millisecondsInAMinute(difference) === 1
+      ? `${millisecondsInAMinute(difference)} minute ago`
       : `${millisecondsInAMinute(difference)} minutes ago`;
   }
   if (key === "second") {
     return millisecondsInASecond(difference) < 1
       ? lessThanMessage
+      : millisecondsInASecond(difference) === 1
+      ? `${millisecondsInASecond(difference)} second ago`
       : `${millisecondsInASecond(difference)} seconds ago`;
   }
   // if no key is provided as an argument, return difference in milliseconds
-  return `${difference} milliseconds ago`;
+  return `${difference} ms ago`;
 };
 
 export default relativeTimeAgo;
